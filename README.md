@@ -2,6 +2,10 @@
 
 Stash the floating windows on the current niri workspace by pushing them off to the screen sides.
 
+![Stashing and restoring three floating terminals](docs/demo.gif)
+
+(Recorded with `contrib/record-demo.sh`.)
+
 ## Install
 
 ```sh
