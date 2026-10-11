@@ -1,0 +1,14 @@
+[Unit]
+Description=Floating window stash for niri
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+# Add --no-focus-follows-mouse if focus-follows-mouse is off in your niri config.
+ExecStart=%h/.cargo/bin/niri-stash daemon
+Restart=always
+RestartSec=2
+RestartPreventExitStatus=78
+
+[Install]
+WantedBy=graphical-session.target

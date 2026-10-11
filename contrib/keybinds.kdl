@@ -1,0 +1,4 @@
+// Add to the binds block of your niri config. Both go through systemd-cat because niri
+// discards a spawned command's stderr; the client's errors then land in `journalctl --user -t niri-stash`.
+Mod+S                               hotkey-overlay-title="Stash floating windows" { spawn "systemd-cat" "-t" "niri-stash" "niri-stash" "toggle"; }
+Mod+Shift+S                         hotkey-overlay-title="Unstash floating windows" { spawn "systemd-cat" "-t" "niri-stash" "niri-stash" "unstash"; }
